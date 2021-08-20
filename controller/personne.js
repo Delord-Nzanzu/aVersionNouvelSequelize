@@ -14,7 +14,7 @@ module.exports={
              console.log(resp);
               res.json(resp);
          }).catch((error)=>{
-             console.log(error);
+             console.log("error : "+error);
               res.status(404).json(error)
          })
     },
