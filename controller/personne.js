@@ -3,13 +3,14 @@ const {nanoid}=require("nanoid");
 
 module.exports={
     save: (req,res)=>{
-        models.tbpersonne.build({
+       let item= models.tbpersonne.build({
             idpersonne:nanoid(20),
             nom:req.body.nom,
             postnom:req.body.postnom,
             prenom:req.body.prenom,
             sexe:req.body.sexe
-         }).save()
+         });
+         item.save()
          .then((resp)=>{
              console.log(resp);
               res.json(resp);

@@ -29,15 +29,15 @@ module.exports = function(sequelize, DataTypes) {
     defaultScope: {
       attributes: { exclude: ["updatedAt", "createAt"] },
     },
-    indexes: [
-      {
-        name: "PRIMARY",
-        unique: true,
-        using: "BTREE",
-        fields: [
-          { name: "idpersonne" },
-        ]
-      },
-    ]
+    // indexes: [
+    //   {
+    //     name: "PRIMARY",
+    //     unique: true,
+    //     using: "BTREE",
+    //     fields: [
+    //       { name: "idpersonne" },
+    //     ]
+    //   },
+    // ]
   });
 };
